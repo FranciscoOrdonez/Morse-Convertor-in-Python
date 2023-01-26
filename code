@@ -1,0 +1,62 @@
+# morse convertor code
+# I am going to create a funcion named morse_convertor with a parameter morsecode as input, create a empty 
+# list called listMorse, iterate from the beginning of the string up to the end - 1, check if there is 
+# a substring with two dots '..', and if there is one, change  to a new string with '--', append the new string 
+# to the created list and return it.
+
+def morse_convertor(morseCode):
+    listMorse = []
+    
+#     Error 1    
+#     for i in range(len(morseCode)-1):
+#         if morseCode[i:i+2]=='..':
+#             newString = morseCode[:i+1]+'--'+morsecode[i+2:]
+#             listMorse.append(newString)
+#     return listMorselistMorse = []
+#   Reason:   the string morsecode[i+2] should be morseCode[i+2].
+#             The character 'C' was typed as 'c' and should be 'C'.
+
+#     Error 2
+#     for i in range(len(morseCode)-1):
+#         if morseCode[i:i+2]=='..':
+#             newString = morseCode[:i+1]+'--'+morseCode[i+2:]
+#             new_code = morsecode[:i] + '--' + morsecode[i+2:]
+#             listMorse.append(newString)
+#     return listMorse
+#     Reason:   the input is '....' and the new list is ['.--..', '..--.', '...--']
+#               There is an extra '.' before each new string and that is 
+#               because the concatenation of new_code start with morseCode[:i+1]
+#               and should be morseCode[:i]
+#               before with error: newString = morseCode[:i+1]+'--'+morseCode[i+2:]
+#               now with no error: newString = morseCode[:i]+'--'+morseCode[i+2:]
+    for i in range(len(morseCode)-1):
+        if morseCode[i:i+2]=='..':
+            newString = morseCode[:i]+'--'+morseCode[i+2:]
+            listMorse.append(newString)
+    return listMorse
+#test cases
+
+#test case 1
+morseCode = '....'
+print('MorseCode: ', morseCode)
+print('New list convertion: ', morse_convertor(morseCode))
+
+#test case 2
+morseCode = '-.-..-...'
+print('MorseCode: ', morseCode)
+print('New list convertion: ',morse_convertor(morseCode))
+
+#test case 3 cover edge case
+morseCode = '.-.-'
+print('MorseCode: ', morseCode)
+print('New list convertion: ',morse_convertor(morseCode))
+
+#test case 4 big string with only one case at the end with doble dot
+morseCode = '-.-.-------------------------------------------------..'
+print('MorseCode: ', morseCode)
+print('New list convertion: ',morse_convertor(morseCode))
+
+morseCode = "."
+print('MorseCode: ',morseCode)
+print('new list convertion: ',morse_convertor(morseCode))
+
