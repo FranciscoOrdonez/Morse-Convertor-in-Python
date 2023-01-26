@@ -29,6 +29,8 @@ Reasoning: At the beginning I got '..' and I expect to append to the list replac
 
 2 INPUT: morseCode = '-.-..-...' OUTPUT: listMorse = ['-.----...', '-.-..---.', '-.-..-.--']
 
+View code  [here](code/code)
+
 Reasoning: There are three groups of substring '..', so the new list will have three strings replacing '..' to '--'.
 
 3 cover edge case: INPUT: morseCode = '-.-.' OUTPUT = listMorse = []
