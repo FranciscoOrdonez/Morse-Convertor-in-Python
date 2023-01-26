@@ -35,6 +35,7 @@ Reasoning: There are three groups of substring '..', so the new list will have t
 3 cover edge case: INPUT: morseCode = '-.-.' OUTPUT = listMorse = []
 
 Reasoning:   there are no substring '..', so the output will be an empty list
+
 4 big string case: INPUT: morseCode = '-.-.-------------------------------------------------..' OUTPUT: listMorse = ['-.-.---------------------------------------------------']
 
 Reasoning: there is only two dots at the end of the string, so it is expected to have only one
