@@ -29,9 +29,6 @@ Reasoning: At the beginning I got '..' and I expect to append to the list replac
 
 2 INPUT: morseCode = '-.-..-...' OUTPUT: listMorse = ['-.----...', '-.-..---.', '-.-..-.--']
 
-View code [here](code)
-
-View code  [here](code/code)
 
 Reasoning: There are three groups of substring '..', so the new list will have three strings replacing '..' to '--'.
 
@@ -46,3 +43,4 @@ Reasoning: there is only two dots at the end of the string, so it is expected to
 
 Reasoning:  there are no substring '..', so the output will be an empty list
 
+View code [here](code)
